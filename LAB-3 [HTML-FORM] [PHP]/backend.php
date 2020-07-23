@@ -14,6 +14,12 @@
 		if($e == ""){ echo "Invalid";}
 		else { echo $e; }
 		echo "<br>";
+		
+		//gender
+		$g = $_POST['gender'];
+		if($g == ""){ echo "Invalid";}
+		else{echo $g;}
+		echo "<br>";
 	}
 	
 ?>
