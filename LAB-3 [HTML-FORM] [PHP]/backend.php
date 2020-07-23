@@ -20,6 +20,14 @@
 		if($g == ""){ echo "Invalid";}
 		else{echo $g;}
 		echo "<br>";
+		
+		//date
+		$d=$_POST['dd'];
+		$m=$_POST['mm'];
+		$y=$_POST['yyyy'];
+		if($d == "" || $m == "" || $y == ""){ echo "Invalid";}
+		else{echo "$d/$m/$y";}
+		echo "<br>";
 	}
 	
 ?>
