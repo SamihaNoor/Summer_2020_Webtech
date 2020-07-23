@@ -34,6 +34,12 @@
 		if(empty($deg)){echo "select degree";}
 		else{ print_r($deg);}
 		echo "<br>";
+		
+		//blood group
+		$bg = $_POST['bg'];
+		if($bg == ""){echo "select blood";}
+		else{ echo $bg;}
+		echo "<br>";
 	}
 	
 ?>

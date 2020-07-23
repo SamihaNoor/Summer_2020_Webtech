@@ -28,6 +28,20 @@
 				<input type="checkbox" name="degree[]" value='SSC'>SSC
 				<input type="checkbox" name="degree[]" value='HSC'>HSC
 				<input type="checkbox" name="degree[]" value='BSc.'>BSc.<br>
+				
+		</fieldset>
+		<fieldset>
+			<legend>Blood Group</legend>
+				<select name="bg">
+						<option value="A+">A+</option>
+						<option value="AB+">AB+</option>
+						<option value="B+">B+</option>
+						<option value="O+">O+</option>
+						<option value="A-">A-</option>
+						<option value="AB-">AB-</option>
+						<option value="B-">B-</option>
+						<option value="O-">O-</option>
+					</select><br>
 				<input type="submit" name="submit" value="Submit">
 		</fieldset>
 	</form>
