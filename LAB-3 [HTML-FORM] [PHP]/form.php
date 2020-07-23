@@ -42,6 +42,11 @@
 						<option value="B-">B-</option>
 						<option value="O-">O-</option>
 					</select><br>
+		</fieldset>
+		<fieldset>
+			<legend>Profile Picture</legend>
+				User Id <input type="number" name="id"><br>
+				Photo <input type="file" name ="photo"><br>
 				<input type="submit" name="submit" value="Submit">
 		</fieldset>
 	</form>

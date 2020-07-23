@@ -40,6 +40,15 @@
 		if($bg == ""){echo "select blood";}
 		else{ echo $bg;}
 		echo "<br>";
+		
+		//profile photo
+		$id= $_POST['id'];
+		$ph=$_POST['photo'];
+		if($id>0){
+			if(!empty($ph)){ echo $id ;}
+			else{echo "no photo";}
+		}
+		else {echo "enter id";}
 	}
 	
 ?>
