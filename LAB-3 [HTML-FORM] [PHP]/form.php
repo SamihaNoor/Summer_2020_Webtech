@@ -22,6 +22,12 @@
 				<input type="number" name="dd" size="4" min="1" max="31"> /
 				<input type="number" name="mm" size="4" min="1" max="12">/
 				<input type="number" name="yyyy" size="4" min="1900" max="2016"><br>
+		</fieldset>
+		<fieldset>
+			<legend>Degree</legend>
+				<input type="checkbox" name="degree[]" value='SSC'>SSC
+				<input type="checkbox" name="degree[]" value='HSC'>HSC
+				<input type="checkbox" name="degree[]" value='BSc.'>BSc.<br>
 				<input type="submit" name="submit" value="Submit">
 		</fieldset>
 	</form>

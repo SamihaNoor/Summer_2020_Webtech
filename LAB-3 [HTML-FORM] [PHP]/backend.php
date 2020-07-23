@@ -28,6 +28,12 @@
 		if($d == "" || $m == "" || $y == ""){ echo "Invalid";}
 		else{echo "$d/$m/$y";}
 		echo "<br>";
+		
+		//degree
+		$deg = $_POST['degree'];
+		if(empty($deg)){echo "select degree";}
+		else{ print_r($deg);}
+		echo "<br>";
 	}
 	
 ?>
