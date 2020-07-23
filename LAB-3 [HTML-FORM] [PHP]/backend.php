@@ -42,13 +42,9 @@
 		echo "<br>";
 		
 		//profile photo
-		$id= $_POST['id'];
 		$ph=$_POST['photo'];
-		if($id>0){
-			if(!empty($ph)){ echo $id ;}
-			else{echo "no photo";}
-		}
-		else {echo "enter id";}
+		if(!empty($ph)){ echo "photo uploaded" ;}
+		else{echo "no photo";}
 	}
 	
 ?>
