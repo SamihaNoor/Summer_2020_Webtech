@@ -8,5 +8,12 @@
 		else if(str_word_count($n)<2){ echo "Invalid name";}
 		else{ echo $n; }
 		echo "<br>";
+		
+		//email
+		$e = $_POST['email'];
+		if($e == ""){ echo "Invalid";}
+		else { echo $e; }
+		echo "<br>";
 	}
+	
 ?>
