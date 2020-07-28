@@ -1,0 +1,78 @@
+<html>
+<head>
+	<title>REGISTRATION</title>
+</head>
+	<body>
+		<table border="1" >
+				<tr>
+					<td width="500px" align="right"><a href = "home.html">Home</a> |
+												<a href="login.html"> Login</a> | 
+												<a href = "registration.html">Registration</a></td>
+				</tr>
+				<tr>
+					<td>
+						<form action="regcheck.php" method="post">
+							<fieldset>
+								<legend><b>REGISTRATION</b></legend><br/>
+									<table width="100%" cellpadding="0" cellspacing="0">
+										<tr><td>Name</td> <td>:</td> <td><input name="name" type="text"></td> <td></td> </tr>		
+										<tr><td colspan="4"><hr/></td></tr>
+										<tr>
+											<td>Email</td>
+											<td>:</td>
+											<td><input name="email" type="email"><abbr title="hint: sample@example.com"><b> i </b></abbr></td>
+											<td></td>
+										</tr>	
+										<tr><td colspan="4"><hr/></td></tr>
+										<tr><td>User Name</td><td>:</td><td><input name="username" type="text"></td><td></td> </tr>		
+										<tr><td colspan="4"><hr/></td></tr>
+										<tr>
+											<td>Password</td>
+											<td>:</td>
+											<td><input name="password" type="password"></td>
+											<td></td>
+										</tr>		
+										<tr><td colspan="4"><hr/></td></tr>
+										<tr>
+											<td>Confirm Password</td>
+											<td>:</td>
+											<td><input name="confirmPassword" type="password"></td>
+											<td></td>
+										</tr>		
+										<tr><td colspan="4"><hr/></td></tr>
+										<tr>
+											<td colspan="3">
+												<fieldset>
+													<legend>Gender</legend>    
+													<input name="gender" type="radio" value="male">Male
+													<input name="gender" type="radio" value="female">Female
+													<input name="gender" type="radio" value="other">Other
+												</fieldset>
+											</td>
+											<td></td>
+										</tr>		
+										<tr><td colspan="4"><hr/></td></tr>
+										<tr>
+											<td colspan="3">
+												<fieldset>
+													<legend>Date of Birth</legend>    
+													<input name="day" type="number" size="2" min="1" max="31"/>/
+													<input name="month"	type="number" size="2" min="1" max="12"/>/
+													<input name="year" type="number" size="4" min="1900" max="2010"/>
+													<font size="2"><i>(dd/mm/yyyy)</i></font>
+												</fieldset>
+											</td>
+											<td></td>
+										</tr>
+									</table>
+									<hr/>
+									<input type="submit" name="submit" value="Submit">
+									<input name ="reset" type="reset" value="Reset">
+							</fieldset>
+						</form>
+					</td>
+				</tr>
+				<tr><td width="500px" align="center">Copyright 2017</td></tr>
+		</table>
+	</body>
+</html>
