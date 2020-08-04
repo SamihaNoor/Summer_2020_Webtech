@@ -19,8 +19,8 @@
 			$_SESSION['user'] 		= $user;*/
 
 
-			$file = fopen('user.txt', 'w');
-			fwrite($file, $id.'|'.$name.'|'.$password.'|'.$email.'|'.$type,"/r/n");
+			$file = fopen("user.txt", "w");
+			fwrite($file, $id.'|'.$name.'|'.$password.'|'.$email.'|'.$type."/n");
 			fclose($file);
 
 			header('location: login.html');
