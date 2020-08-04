@@ -3,16 +3,16 @@
 
 	if(isset($_POST['submit'])){
 
-		$name 		= $_POST['name'];
+		$id 		= $_POST['id'];
 		$password 	= $_POST['password'];
 
-		if(empty($uname) || empty($password)){
+		if(empty($id) || empty($password)){
 			echo "null submission";
 
 		}else{
 			
 			$file = fopen("user.txt", "r");
-			$data = fread($file, filesize('user.txt'));
+			$data = fread($file, filesize("user.txt"));
 			$user = explode('|', $data);
 
 
@@ -23,7 +23,7 @@
 
 			//print_r($user);
 
-			if(trim($user[0]) == $name && trim($ser[1]) == $password){
+			if(trim($user[0]) == $id && trim($user[1]) == $password){
 				$_SESSION['status']  = "Ok";
 				header('location: home.php');
 			}else{

@@ -20,7 +20,7 @@
 
 
 			$file = fopen("user.txt", "w");
-			fwrite($file, $id.'|'.$name.'|'.$password.'|'.$email.'|'.$type."/n");
+			fwrite($file, $id.'|'.$password.'|'.$name.'|'.$email.'|'.$type."/n");
 			fclose($file);
 
 			header('location: login.html');

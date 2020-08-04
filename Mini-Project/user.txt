@@ -1,1 +1,1 @@
-12345|mimi|abcd|mimi@mail.com|admin/n
+8001|vivi|mushi|mushi@mail.com|user/n
