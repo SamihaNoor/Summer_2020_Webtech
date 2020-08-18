@@ -178,4 +178,21 @@
 			return false;
 		}
 	}
+	//delete company query
+	function deleteCompany($id)
+	{
+		$conn = dbConnection();
+		if(!$conn)
+		{
+			echo "DB connection error";
+		}
+
+		$sql = "delete from companies where id={$id}";
+
+		if(mysqli_query($conn, $sql)){
+			return true;
+		}else{
+			return false;
+		}
+	}
 ?>

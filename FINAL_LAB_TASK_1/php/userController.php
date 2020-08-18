@@ -138,5 +138,18 @@
 			}
 		}
 	}
+	
+	//delete company
+	if(isset($_POST['deleteCompany']))
+	{
+		$id = $_POST['id'];
+		$status = deleteCompany($id);
+
+			if($status){
+				header('location: ../views/all_companies.php?success=done');
+			}else{
+				//header('location: ../views/all_companies.php?id={$id}');
+			}
+	}
 
 ?>
