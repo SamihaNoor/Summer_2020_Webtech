@@ -82,7 +82,9 @@
 		}
 	}
 	
-	function delete($id){
+	//delete query
+	function delete($id)
+	{
 		$conn = dbConnection();
 		if(!$conn){
 			echo "DB connection error";
@@ -90,6 +92,26 @@
 
 		$sql = "delete from users where id={$id}";
 
+		if(mysqli_query($conn, $sql)){
+			return true;
+		}else{
+			return false;
+		}
+	}
+	//add Company query
+	function addCompany($company,$name){
+		$conn = dbConnection();
+
+		if(!$conn){
+			echo "DB connection error";
+		}
+		
+		$sql = "select * from users where username='{$name}'";
+		$result = mysqli_query($conn, $sql);
+		$user = mysqli_fetch_assoc($result);
+		$id = $user['id'];
+		
+		$sql = "insert into companies values('', '{$company['companyName']}','{$company['description']}', '{$company['industry']}', '{$company['website']}', '{$company['logo']}','{$id}')";
 		if(mysqli_query($conn, $sql)){
 			return true;
 		}else{

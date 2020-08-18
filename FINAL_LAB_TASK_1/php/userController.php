@@ -58,6 +58,7 @@
 			}
 		}
 	}
+	//delete
 	if(isset($_POST['delete']))
 	{
 		$id = $_POST['id'];
@@ -68,6 +69,38 @@
 			}else{
 				//header('location: ../views/all_users.php?id={$id}');
 			}
+	}
+	if(isset($_POST['add']))
+	{
+		$companyName = $_POST['companyName'];
+		$description = $_POST['description'];
+		$industry = $_POST['industry'];
+		$website = $_POST['website'];
+		$logo = $_POST['logo'];
+		$name = $_SESSION['username'];
+
+		if(empty($companyName) || empty($description) || empty($industry) || empty($website) || empty($logo))
+		{
+			header('location: ../views/addCompany.php?error=null_value');
+		}
+		else
+		{
+			$company = [
+				'companyName'=> $companyName,
+				'description'=> $description,
+				'industry'=> $industry,
+				'website'=> $website,
+				'logo'=> $logo,
+			];
+
+			$status = addCompany($company,$name);
+
+			if($status){
+				header('location: ../views/home.php?success=done');
+			}else{
+				header('location: ../views/addCompany.php?error=db_error');
+			}
+		}
 	}
 
 ?>
