@@ -86,7 +86,8 @@
 	function delete($id)
 	{
 		$conn = dbConnection();
-		if(!$conn){
+		if(!$conn)
+		{
 			echo "DB connection error";
 		}
 
@@ -99,10 +100,12 @@
 		}
 	}
 	//add Company query
-	function addCompany($company,$name){
+	function addCompany($company,$name)
+	{
 		$conn = dbConnection();
 
-		if(!$conn){
+		if(!$conn)
+		{
 			echo "DB connection error";
 		}
 		
@@ -115,6 +118,63 @@
 		if(mysqli_query($conn, $sql)){
 			return true;
 		}else{
+			return false;
+		}
+	}
+	
+	//All companies
+	function getAllCompanies()
+	{
+		$conn = dbConnection();
+
+		if(!$conn)
+		{
+			echo "DB connection error";
+		}
+
+		$sql = "select * from companies";
+		$result = mysqli_query($conn, $sql);
+		$companies = [];
+
+		while($row = mysqli_fetch_assoc($result)){
+			array_push($companies, $row);
+		}
+
+		return $companies;
+	}
+	
+	//get company id
+	function getCId($id)
+	{
+		$conn = dbConnection();
+
+		if(!$conn)
+		{
+			echo "DB connection error";
+		}
+
+		$sql = "select * from companies where id={$id}";
+		$result = mysqli_query($conn, $sql);
+		$row = mysqli_fetch_assoc($result);
+		return $row;
+	}
+	
+	//update company
+	function updateCompany($company)
+	{
+		$conn = dbConnection();
+		if(!$conn)
+		{
+			echo "DB connection error";
+		}
+
+		$sql = "update companies set company_name='{$company['companyName']}', profile_description='{$company['description']}', industry='{$company['industry']}', company_website='{$company['website']}', company_logo='{$company['logo']}' where id={$company['id']}";
+
+		if(mysqli_query($conn, $sql))
+		{
+			return true;
+		}else
+		{
 			return false;
 		}
 	}

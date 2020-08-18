@@ -7,7 +7,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>User List</title>
+	<title>Company List</title>
 </head>
 <body>
 
@@ -41,8 +41,8 @@
 				<td><img src="<?=$companies[$i]['company_logo']?>" width="100" height="100"></td>
 				<td><?=$companies[$i]['user_account_id']?></td>
 				<td>
-					<a href="edit.php?id=<?=$companies[$i]['id']?>">Edit</a> |
-					<a href="delete.php?id=<?=$companies[$i]['id']?>">Delete</a> 
+					<a href="editCompany.php?id=<?=$companies[$i]['id']?>">Edit</a> |
+					<a href="deleteCompany.php?id=<?=$companies[$i]['id']?>">Delete</a> 
 				</td>
 			</tr>
 

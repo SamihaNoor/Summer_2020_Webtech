@@ -70,6 +70,7 @@
 				//header('location: ../views/all_users.php?id={$id}');
 			}
 	}
+	//add company
 	if(isset($_POST['add']))
 	{
 		$companyName = $_POST['companyName'];
@@ -96,9 +97,44 @@
 			$status = addCompany($company,$name);
 
 			if($status){
-				header('location: ../views/home.php?success=done');
+				header('location: ../views/all_companies.php?success=done');
 			}else{
 				header('location: ../views/addCompany.php?error=db_error');
+			}
+		}
+	}
+	
+	//edit company
+	if(isset($_POST['editCompany']))
+	{
+		$companyName = $_POST['companyName'];
+		$description = $_POST['description'];
+		$industry = $_POST['industry'];
+		$website = $_POST['website'];
+		$logo = $_POST['logo'];
+		$id= $_POST['id'];
+
+		if(empty($companyName) || empty($description) || empty($industry) || empty($website) || empty($logo))
+		{
+			header('location: ../views/all_companies.php?error=null_value');
+		}
+		else
+		{
+			$company = [
+				'id'=> $id,
+				'companyName'=> $companyName,
+				'description'=> $description,
+				'industry'=> $industry,
+				'website'=> $website,
+				'logo'=> $logo,
+			];
+
+			$status = updateCompany($company);
+
+			if($status){
+				header('location: ../views/all_companies.php?success=done');
+			}else{
+				header('location: ../views/editCompany.php?error=db_error');
 			}
 		}
 	}
