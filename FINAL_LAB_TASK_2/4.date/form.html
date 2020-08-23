@@ -1,0 +1,18 @@
+<html>
+<head>
+	<title>Date of Birth</title>
+	<script type="text/javascript" src="script.js"></script>
+</head>
+<body>
+	<form name="form" action="backend.php" onsubmit="return validate()" method="post">
+		<fieldset>
+			<legend>Date of Birth</legend>
+				<input type="number" name="dd" size="4" min="1" max="31"> /
+				<input type="number" name="mm" size="4" min="1" max="12">/
+				<input type="number" name="yyyy" size="4" min="1900" max="2016"><br>
+				<input type="submit" name="submit" value="Submit">
+		</fieldset>
+	</form>
+
+</body>
+</html>
