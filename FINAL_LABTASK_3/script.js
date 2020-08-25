@@ -1,6 +1,7 @@
 function validate()
 {
 	var n = document.forms["form"]["name"].value;
+	var valid = false;
 	if (n == "") 
 	{
 		//alert("Please enter name first");
@@ -21,6 +22,10 @@ function validate()
 	}
 	else
 	{ 
+		valid = true;
+	}
+	if(valid)
+	{
 		return true;
 	}
 }
