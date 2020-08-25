@@ -101,6 +101,20 @@ function validate()
 		valid =true;
 	}
 	
+	//blood group
+	var b = document.forms["form"]["bg"].value;
+	
+	if(b == "") 
+	{
+		alert("You must select one");
+		valid =false;
+		return false;
+	}
+	else
+	{ 
+		valid =true;
+	}
+	
 	if(valid)
 	{
 		return true;
