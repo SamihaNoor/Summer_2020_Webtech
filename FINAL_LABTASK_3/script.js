@@ -137,6 +137,21 @@ function validate()
 		return false;
 	}
 	
+	//profile pic
+	
+	var photo = document.forms["form"]["photo"].value;
+	
+	if(photo == "")
+	{
+		alert("you must upload a photo");
+		valid = false;
+		return false;
+	}
+	else
+	{
+		valid = true;
+	}
+	
 	if(valid)
 	{
 		return true;
