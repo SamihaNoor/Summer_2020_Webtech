@@ -115,6 +115,28 @@ function validate()
 		valid =true;
 	}
 	
+	//degree
+	var d = document.forms["form"]["degree[]"];
+	
+	if(d[0].checked) 
+	{
+		valid=true;
+	}
+	else if(d[1].checked) 
+	{
+		valid=true;
+	}
+	else if(d[2].checked) 
+	{
+		valid=true;
+	}
+	else
+	{ 
+		alert("You must select one");
+		valid = false;
+		return false;
+	}
+	
 	if(valid)
 	{
 		return true;
