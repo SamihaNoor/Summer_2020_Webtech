@@ -1,5 +1,6 @@
 function validate()
 {
+	//name
 	var n = document.forms["form"]["name"].value;
 	var valid =false;
 	if (n == "") 
@@ -28,6 +29,7 @@ function validate()
 		valid = true;
 	}
 	
+	//email
 	var e = document.forms["form"]["email"].value;
 	if (e == "") 
 	{
@@ -48,11 +50,49 @@ function validate()
 		valid = true;
 	}
 	
+	//gender
 	var g = document.forms["form"]["gender"].value;
 	if (g == "") 
 	{
 		alert("Please enter gender first");
 		//document.getElementById("error").innerHTML="Please enter gender first";
+		valid =false;
+		return false;
+	}
+	else
+	{ 
+		valid =true;
+	}
+	
+	//date
+	var d = document.forms["form"]["dd"].value;
+	var m = document.forms["form"]["mm"].value;
+	var y = document.forms["form"]["yyyy"].value;
+	if (d == "" || m=="" || y=="") 
+	{
+		alert("Date cannot be empty");
+		//document.getElementById("error").innerHTML="Date cannot be empty";
+		valid =false;
+		return false;
+	}
+	else if(d<1 || d>31)
+	{
+		alert("Please day between 1-31");
+		//document.getElementById("error").innerHTML="Please day between 1-31";
+		valid =false;
+		return false;
+	}
+	else if(m<1 || m>12)
+	{
+		alert("Please day between 1-12");
+		//document.getElementById("error").innerHTML="Please day between 1-12";
+		valid =false;
+		return false;
+	}
+	else if(y<1900 || y>2016)
+	{
+		alert("Please day between 1900-2016");
+		//document.getElementById("error").innerHTML="Please day between 1900-2016";
 		valid =false;
 		return false;
 	}
