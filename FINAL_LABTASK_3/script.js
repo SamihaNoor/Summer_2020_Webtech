@@ -48,6 +48,19 @@ function validate()
 		valid = true;
 	}
 	
+	var g = document.forms["form"]["gender"].value;
+	if (g == "") 
+	{
+		alert("Please enter gender first");
+		//document.getElementById("error").innerHTML="Please enter gender first";
+		valid =false;
+		return false;
+	}
+	else
+	{ 
+		valid =true;
+	}
+	
 	if(valid)
 	{
 		return true;
