@@ -4,14 +4,14 @@
 	function cEmail($email)
 	{
 		$conn = dbConnection();
-
-		if(!$conn){
+		if(!$conn)
+		{
 			echo "DB connection error";
 		}
 		
-		$sql= "select * from users where email like '{$email}'";
+		$sql= "select email from users where email like '{$email}'";
 		$result = mysqli_query($conn, $sql);
-		if(mysqli_fetch_assoc($result)) 
+		if(mysqli_fetch_assoc($result) > 0) 
 		{
 			return true;
 		}

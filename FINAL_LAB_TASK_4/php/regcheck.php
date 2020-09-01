@@ -10,7 +10,11 @@
 		
 		if(checkEmail)
 		{
-			
+			echo "already exists";
+		}
+		else
+		{
+			echo "okay";
 		}
 		
 		/* if(empty($username) || empty($password) || empty($email))

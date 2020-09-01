@@ -24,7 +24,7 @@
 				<tr>
 					<td>Email</td>
 					<td><input type="text" id="email "name="email" onkeyup="emailCheck()"></td>
-					<td id="emailError"></td>
+					<td id="e2"></td>
 				</tr>
 				<tr>
 					<td>Password</td>
@@ -37,17 +37,18 @@
 					<td><a href="login.php" style="display: none">Login</a>
 				</tr>
 			</table>
+			
 		<script type="text/javascript">
 			function emailCheck()
 			{
 				var e = document.getElementById('email').value;
 				if (e == "") 
 				{
-					document.getElementById("emailError").innerHTML="Please enter email first";
+					document.getElementById("e2").innerHTML="Please enter email first";
 				}
 				if (e.indexOf("@")<0) 
 				{
-					document.getElementById("emailError").innerHTML="Please enter valid email first";
+					document.getElementById("e2").innerHTML="Please enter valid email first";
 				}
 				else
 				{ 
@@ -63,11 +64,11 @@
 
 							if(this.responseText != "")
 							{
-								document.getElementById('emailError').innerHTML = this.responseText;
+								document.getElementById('e2').innerHTML = this.responseText;
 							}
 							else
 							{
-								document.getElementById('emailError').innerHTML = "";
+								document.getElementById('e2').innerHTML = "";
 							}
 							
 						}	
