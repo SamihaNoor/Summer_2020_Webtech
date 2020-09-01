@@ -1,7 +1,7 @@
 <?php
 	require_once('../db/db.php');
 	
-	function cEmail($email)
+	/*function cEmail($email)
 	{
 		$conn = dbConnection();
 		if(!$conn)
@@ -19,7 +19,7 @@
 		{
 			return false;
 		}
-	}
+	}*/
 	
 	function getByID($id)
 	{

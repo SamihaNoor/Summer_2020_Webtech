@@ -23,7 +23,7 @@
 				</tr>
 				<tr>
 					<td>Email</td>
-					<td><input type="text" id="email "name="email" onkeyup="emailCheck()"></td>
+					<td><input type="text" id="email" name="email" onkeyup="emailCheck()"/></td>
 					<td id="e2"></td>
 				</tr>
 				<tr>
@@ -37,21 +37,16 @@
 					<td><a href="login.php" style="display: none">Login</a>
 				</tr>
 			</table>
-			
 		<script type="text/javascript">
 			function emailCheck()
 			{
 				var e = document.getElementById('email').value;
-				if (e == "") 
-				{
-					document.getElementById("e2").innerHTML="Please enter email first";
-				}
-				if (e.indexOf("@")<0) 
+				/*if (e.indexOf("@")<0) 
 				{
 					document.getElementById("e2").innerHTML="Please enter valid email first";
 				}
 				else
-				{ 
+				{*/
 					var xhttp = new XMLHttpRequest();
 					xhttp.open('POST', '../php/regcheck.php', true);
 					xhttp.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
@@ -73,7 +68,7 @@
 							
 						}	
 					}
-				}	
+				//}	
 			}
 		</script>
 </body>

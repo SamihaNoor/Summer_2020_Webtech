@@ -6,15 +6,16 @@
 		$password = $_POST['password'];
 		$email 	= $_POST['email'];
 
-		$checkEmail = cEmail($email);
-		
-		if(checkEmail)
+		$conn = mysqli_connect('localhost', 'root', '', 'webtech');
+		$sql= "select email from users where email like '{$email}'";
+		$result = mysqli_query($conn, $sql);
+		if(mysqli_fetch_assoc($result) > 0) 
 		{
-			echo "already exists";
+			echo "Existing email";
 		}
 		else
 		{
-			echo "okay";
+			echo "Okay";
 		}
 		
 		/* if(empty($username) || empty($password) || empty($email))
@@ -40,5 +41,4 @@
 				header('location: ../views/register.php?error=db_error');
 			}
 		}*/
-	}
 ?>
