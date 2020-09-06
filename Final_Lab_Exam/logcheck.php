@@ -27,7 +27,14 @@
 				setcookie('password', $password, time()+3600, '/');
 				setcookie('status', "OK", time()+3600, '/');
 			}
-			header('location: dashboard.php');
+			if($admin['type']==2)
+			{
+				header('location: home.php');
+			}
+			else
+			{
+				header('location: dashboard.php');
+			}
 		}
 		else
 		{
