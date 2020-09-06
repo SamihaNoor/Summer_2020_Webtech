@@ -68,9 +68,4 @@
 	</body>
 </html>
 <?php
-	}
-	else
-	{
-		header('location: login.html');
-	}
 ?>
