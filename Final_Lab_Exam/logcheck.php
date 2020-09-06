@@ -7,7 +7,7 @@
 		$password = $_POST['password'];
 
 		$con = mysqli_connect('localhost','root','','online_blog');
-		$sql= "select * from users where username=".$userName." and password='".$password."'";
+		$sql= "select * from users where username='".$userName."' and password='".$password."'";
 		$data= mysqli_query($con,$sql);
 		$admin = mysqli_fetch_assoc($data);
 		
