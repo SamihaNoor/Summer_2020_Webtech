@@ -2,6 +2,7 @@
 <html>
 <head>
 	<title>Author List</title>
+	<script type="text/javascript" src="viewauthors.js"></script>
 </head>
 <body>
 	<table>
@@ -13,7 +14,8 @@
 		</tr>
 	</table>
 	
-	<p>Authors</h3>
+	Search <input type="text" id="search" name="search" onkeyup="searchAuthor()">
+	<p>Authors</p>
 	
 	<table>
 		<tr>
@@ -38,6 +40,7 @@
 			<td><?=$data['contact_number']?></td>
 			<td><?=$data['username']?></td>
 			<td><?=$data['type']?></td>
+			
 			</tr>
 
 		<?php } ?>
