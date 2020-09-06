@@ -8,7 +8,6 @@
 </head>
 	<body>
 	<p style="text-align:right">
-		<a href = "viewprofile.php"><?php echo $name ;?></a> |
 		<a href="logout.php"> Logout</a>
 	</p>
 		<table>
