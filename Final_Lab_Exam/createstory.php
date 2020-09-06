@@ -13,5 +13,17 @@
 				</td>
 			</tr>
 		</table>
+		<form action="story.php" onsubmit="return story()" method="post">
+			<table>
+				<tr>
+					<td>Date & Time</td>
+					<td><input type="date" name="datetime"></td>
+				<tr>
+				<tr>
+					<td>Story</td>
+					<td><input type="text" name="story"></td>
+				<tr>
+			</table>
+		</form>
 	</body>
 </html>
